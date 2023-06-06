@@ -36,7 +36,7 @@ public class Modelo {
      */
     public void cargarJugador(String nombreJugador) {
         try {
-            BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\IdeaProjects\\mini_Proyecto_2\\src\\jugadores.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\IdeaProjects\\mini_Proyecto_2\\src\\Archivos_T\\jugadores.txt"));
             String linea;
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(",");
@@ -55,7 +55,7 @@ public class Modelo {
      */
     public void guardarJugador() {
         try {
-            BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\IdeaProjects\\mini_Proyecto_2\\src\\jugadores.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\IdeaProjects\\mini_Proyecto_2\\src\\Archivos_T\\jugadores.txt"));
             String linea;
             StringBuilder sb = new StringBuilder();
             while ((linea = br.readLine()) != null) {
@@ -68,7 +68,7 @@ public class Modelo {
             }
             System.out.println(sb.toString()); // Imprime el contenido del objeto sb
             br.close();
-            BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\IdeaProjects\\mini_Proyecto_2\\src\\jugadores.txt"));
+            BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\IdeaProjects\\mini_Proyecto_2\\src\\Archivos_T\\jugadores.txt"));
             bw.write(sb.toString());
             bw.close();
         } catch (IOException e) {
@@ -137,7 +137,7 @@ public class Modelo {
      */
     public void cargarPalabras() {
         try {
-            BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\IdeaProjects\\mini_Proyecto_2\\src\\palabras.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\IdeaProjects\\mini_Proyecto_2\\src\\Archivos_T\\palabras.txt"));
             String linea;
             palabras = new ArrayList<String>();
             while ((linea = br.readLine()) != null) {
